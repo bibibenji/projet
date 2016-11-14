@@ -1,0 +1,33 @@
+sf_platform_home:
+    path:      /{page}
+    defaults:
+        _controller: SFPlatformBundle:Advert:index
+        page:        1
+    requirements:
+        page: \d*
+    
+sf_platform_view:
+    path:      /advert/{id}
+    defaults:
+        _controller: SFPlatformBundle:Advert:view
+    requirements:
+        id: \d+
+
+sf_platform_add:
+    path:      /add
+    defaults:
+        _controller: SFPlatformBundle:Advert:add
+
+sf_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: SFPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+sf_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: SFPlatformBundle:Advert:delete
+    requirements:
+        id: \d+
